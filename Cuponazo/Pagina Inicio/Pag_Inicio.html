@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuponazo</title>
+    <link rel="stylesheet" href="pag_inicio.css">
+</head>
+<body>
+
+    <main>
+        <header class="main-header"> 
+    <img src="../logo.png" alt="Logo" class="logo"> 
+    
+ 
+
+    <div class="search-container">
+         <span>🛒</span>
+        <input placeholder="Busqueda">
+        <span>🔍</span> 
+    </div>
+</header>
+      <div class="menu-icon" onclick="abrirMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="miMenu" class="nav-side">
+        <a href="javascript:void(0)" class="btn-cerrar" onclick="cerrarMenu()">&times;</a>
+         
+        <button class="btn-desplegable" onclick="togglePerfil()">
+            Mi Perfil <span id="flecha">▼</span>
+        </button>
+        <div id="sub-perfil" class="contenedor-submenu">
+            <a href="#">Perfil Personal</a>
+            <a href="#">Mis Cupones</a>
+            <a href="#">Carrito</a>
+        </div>
+        
+        <button class="btn-desplegable" onclick="toggleCategorias()">
+            Categorías <span id="flecha">▼</span>
+        </button>
+        <div id="sub-categorias" class="contenedor-submenu">
+            <a href="#">Deportes</a>
+            <a href="#">Bienestar</a>
+            <a href="#">Ocio</a>
+        </div>
+        <a href="#">Cerrar Sesion</a>
+    </nav>
+    <section>
+        <div  class="rectangulo1">
+        <article class="articulo1">
+            <img src="../gimnasio.jpeg">
+            <div class="info">
+            <h1>Gimnasio Olimpo</h1>
+            <p class="descripcion">¡Transforma tu cuerpo hoy! Ven a nuestro gimnasio Olimpo, equipos modernos, entrenadores expertos y ambiente motivador. ¡Inscríbete ya!</p>
+            <p class="precio1">Precio: 20€</p>
+            </div>
+        </article>
+        <button class="boton_compra1">Añadir al Carrito</button>
+       </div> 
+       
+    </section>
+    <section>
+        <div  class="rectangulo2">
+        <article class="articulo2">
+            <img src="../kart.jpg">
+            <div class="info">
+            <h2>Karting RunRun</h2>
+            <p class="descripcion">El karting es una emocionante experiencia de velocidad y adrenalina. Pequeños vehículos, con motores potentes, corren sobre circuitos llenos de curvas y rectas. Los pilotos, equipados con cascos protectores, sienten la emoción al manejar a toda velocidad, disfrutando del rugido del motor y la sensación de libertad en cada vuelta.</p>
+            <p class="precio2">Precio: 25€</p>
+            </div>
+        </article>
+        <button class="boton_compra2">Añadir al Carrito</button>
+       </div>    
+    </section>
+<section>
+        <div  class="rectangulo3">
+        <article class="articulo3">
+            <img src="../escape.jpg">
+            <div class="info">
+            <h3>Escape Room "La Salida"</h3>
+            <p class="descripcion">Bienvenidos al Escape Room: "La Salida". Deben encontrar pistas ocultas para descifrar el código que abre la caja secreta. El tiempo corre, no se distraigan. Cada segundo cuenta para escapar antes de que el reloj marque la hora fatal. ¡Buena suerte!.</p>
+            <p class="precio3">Precio: 50€</p>
+            </div>
+        </article>
+        <button class="boton_compra3">Añadir al Carrito</button>
+       </div>    
+    </section>
+    </main>
+<script src="pag_inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+*{
+    text-align: center;
+    background-color: #F8FAFC;
+}
+img{
+    margin-top: 150px;
+    width: 150px;
+}
+section{
+   margin-bottom: 15px;
+}
+h1{
+    color: #1E293B;
+    font-size: medium 500 italic;
+}
+
+p{
+    color: #4B5563;
+    font-family: "Inter";
+}
+button{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+footer{
+    padding-top: 12rem;
+}
