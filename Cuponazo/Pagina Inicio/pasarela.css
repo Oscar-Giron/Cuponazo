@@ -1,0 +1,86 @@
+/* CONFIGURACIÓN GLOBAL */
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #F1F5F9;
+    font-family: 'Inter', sans-serif;
+}
+/* CONFIGURACION DE LA PASARELA DE PAGO*/
+.pasarela-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.resumen-pago { 
+    background: #F8FAFC; 
+    padding: 1.5rem; 
+    border-radius: 12px; 
+    margin-bottom: 2rem; 
+    border: 1px solid #E2E8F0;
+    text-align: center;
+}
+
+.metodo-pago {
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.metodo-pago:hover { 
+    border-color: #16A34A; 
+}
+
+.metodo-pago.active { 
+    border-color: #16A34A; 
+    background: #F0FDF4; 
+}
+
+.formulario-pago { 
+    display: none; 
+    margin-top: 1rem; 
+    padding-top: 1rem; 
+    border-top: 1px solid #E2E8F0; 
+}
+
+/* Inputs*/
+.input-pago { 
+    width: 100%; 
+    padding: 0.8rem; 
+    margin: 0.5rem 0; 
+    border: 1px solid #CBD5E1; 
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input-pago:focus {
+    border-color: #16A34A;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #16A34A;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-confirmar:hover {
+    background-color: #15803D;
+}
