@@ -1,0 +1,421 @@
+/* CONFIGURACIÓN GLOBAL */
+html {
+    font-size: 16px; 
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F1F5F9;
+    color: #1E293B;
+    overflow-x: hidden;
+}
+
+/* HEADER*/
+.main-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1.875rem;
+    background-color: #ffffff;
+    border-bottom: 0.063rem solid #E2E8F0;
+    height: 5.5rem; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.05);
+}
+
+.logo-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    height: 5.2rem; 
+}
+
+.logo { 
+    height: 100%; 
+    width: auto; 
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.search-container input {
+    padding: 0.625rem 0.938rem;
+    border: 0.063rem solid #CBD5E1;
+    border-radius: 0.5rem;
+    outline: none;
+    width: 12.5rem;
+}
+
+/* PRODUCTOS */
+.rectangulo-producto {
+    width: 90%;
+    max-width: 62.5rem;
+    background-color: #ffffff;
+    border: 0.063rem solid #E2E8F0;
+    border-radius: 1rem;
+    margin: 1.463rem auto; 
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.rectangulo-producto:hover { 
+    transform: translateY(-0.188rem); 
+}
+
+.articulo-producto { 
+    display: flex; 
+    gap: 1.563rem; 
+}
+
+.articulo-producto img {
+    width: 13.75rem;
+    height: 8.375rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+}
+
+.info { 
+    flex: 1; 
+}
+
+.precio-producto { 
+    font-weight: 800; 
+    font-size: 1.375rem;
+    color: #16A34A; 
+    text-align: right; 
+}
+
+.boton-añadir {
+    padding: 0.875rem 1.75rem;
+    color: #ffffff;
+    background-color: #16A34A;
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    align-self: flex-end;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+.boton-añadir:hover { 
+    background-color: #15803D; 
+}
+/* Estilos para el desglose de precios en la tarjeta */
+.contenedor-precios {
+    text-align: right; 
+    margin-top: 1rem;
+}
+
+.precio-viejo {
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.tachado {
+    text-decoration: line-through;
+    color: #94A3B8; 
+    font-size: 0.95rem;
+}
+
+.ahorro-badge {
+    background-color: #FEE2E2; 
+    color: #EF4444;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.precio-producto { 
+    font-weight: 800; 
+    font-size: 1.5rem; 
+    color: #16A34A; 
+    margin: 0;
+}
+/* MENÚ LATERAL IZQUIERDO (NAV-SIDE) */
+.menu-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 2.1rem; 
+    left: 1.25rem;
+    z-index: 1100;
+}
+
+.menu-icon div {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #16A34A;
+    margin: 0.375rem 0;
+    border-radius: 0.25rem;
+}
+
+.nav-side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1200;
+    top: 0;
+    left: 0;
+    background-color: #1b4d1e;
+    overflow-x: hidden;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Color blanco para la X del menú verde */
+.nav-side .btn-cerrar { 
+    font-size: 2.5rem; 
+    color: #ffffff; 
+    text-decoration: none; 
+    padding: 1rem 1.875rem;
+    display: block;
+}
+
+.nav-side a, .btn-desplegable {
+    padding: 1.125rem 1.875rem;
+    color: #F8FAFC;
+    display: block;
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.125rem;
+}
+
+.contenedor-submenu { 
+    background-color: #143a17; 
+    display: none; 
+}
+.contenedor-submenu a { 
+    font-size: 1rem; 
+    padding-left: 3.75rem; 
+}
+
+.menu-content { 
+    flex-grow: 1; 
+}
+
+.enlace-logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ff9999 !important;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.enlace-logout:hover { 
+    background-color: #c0392b !important; 
+    color: white !important; 
+}
+
+/* CARRITO LATERAL (DERECHO) */
+.cart-side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1300;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: -0.625rem 0 1.875rem rgba(0,0,0,0.1);
+    overflow-x: hidden;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-header {
+    padding: 1.563rem;
+    border-bottom: 0.063rem solid #F1F5F9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header .btn-cerrar {
+    font-size: 2.5rem;
+    color: #1E293B;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.cart-body { 
+    flex: 1; 
+    padding: 1.25rem; 
+    overflow-y: auto; 
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F8FAFC;
+    padding: 0.625rem 0.938rem;
+    border-radius: 0.75rem;
+    margin-bottom: 0.75rem;
+    gap: 0.625rem;
+}
+
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    background: #ffffff;
+    padding: 0.313rem 0.625rem;
+    border-radius: 1.25rem;
+    border: 0.063rem solid #E2E8F0;
+}
+
+.btn-qty {
+    background: #16A34A;
+    border: none;
+    color: white;
+    width: 1.375rem;
+    height: 1.375rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-numero { 
+    font-weight: bold; 
+    min-width: 1.25rem; 
+    text-align: center; 
+    font-size: 0.9rem; 
+}
+
+.cart-footer {
+    padding: 1.563rem;
+    background-color: #F8FAFC;
+    border-top: 0.063rem solid #E2E8F0;
+}
+
+.total-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 1.25rem;
+}
+
+.btn-pagar {
+    width: 100%;
+    padding: 1rem;
+    background-color: #16A34A;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* UTILIDADES */
+.abierto { 
+    width: 23.75rem !important; 
+}
+
+.cart-vacio { 
+    text-align: center;
+    color: #94A3B8; 
+    margin-top: 3.125rem; 
+}
+
+.btn-eliminar-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    padding: 0.313rem;
+    margin-left: 0.625rem;
+    transition: transform 0.2s;
+    filter: grayscale(1);
+}
+
+.btn-eliminar-item:hover { 
+    transform: scale(1.2); 
+    filter: grayscale(0); 
+}
+
+/* Estilos para el enlace a la pagina de detalle */
+.enlace-detalle {
+    text-decoration: none; 
+    color: inherit;        
+    display: block;       
+}
+
+.articulo-producto {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.articulo-producto:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.rectangulo-producto {
+    overflow: hidden;
+}
+
+/* SECCIÓN RESPONSIVE */
+@media (max-width: 768px) {
+    .abierto { 
+        width: 100% !important; 
+    }
+    .articulo-producto { 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
+        gap: 1rem; 
+    }
+    .articulo-producto img { 
+        width: 100%; 
+        height: auto; 
+        max-height: 12.5rem; 
+    }
+    .precio-producto { 
+        text-align: center; 
+        margin-top: 0.5rem; 
+    }
+    .boton-añadir { 
+        align-self: center;
+        width: 100%;
+    }
+    .search-container input { 
+        display: none; 
+    }
+    /* Logo más pequeño y centrado en móviles */
+    .main-header {
+        height: 5rem;
+    }
+    .logo-link { 
+        height: 3.5rem;
+        left: 50%;
+    }
+    .menu-icon {
+        top: 1.25rem;
+    }
+}
