@@ -2,9 +2,9 @@
 session_start();
 include __DIR__ . '/../Pagina Inicio/db.php'; 
 
-// Verificamos si el usuario tiene la "pulsera" (sesión)
+// Verificamos el usuario
 if (!isset($_SESSION['id_usuario'])) {
-    // Si no está logueado, lo mandamos al login de cabeza
+    // Si no está logueado, lo mandamos al login
     header("Location: ../Login/inicio_sesion.html"); 
     exit();
 }
