@@ -39,7 +39,7 @@ if ($res_user && mysqli_num_rows($res_user) > 0) {
         
         // ¡LA PIEZA CLAVE QUE FALTABA!
         $_SESSION['usuario_nombre'] = $datos_user['nombre'];
-        $_SESSION['id_usuario'] = $datos_user['id_usuario']; // Le ponemos la "pulsera" con su ID
+        $_SESSION['id_usuario'] = $datos_user['id_usuario'];
         
         // Lo mandamos a la página de inicio
         header("Location: http://localhost/Cuponazo/Pagina%20Inicio/Pag_inicio.php");
