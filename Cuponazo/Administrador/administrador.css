@@ -1,0 +1,171 @@
+/*Variables de Color*/
+:root {
+    --primary: #2c3e50;
+    --secondary: #34495e;
+    --accent: #3498db;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --light: #f4f7f6;
+    --white: #ffffff;
+}
+
+/*General*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--light);
+    margin: 0;
+    color: var(--primary);
+}
+
+/*Header*/
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#inputBuscador {
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: none;
+    width: 300px;
+    outline: none;
+}
+
+/*Layout*/
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/*Botones*/
+.btn {
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+.btn:active { 
+    transform: scale(0.98); 
+}
+
+.btn-add { 
+    background-color: var(--accent); 
+    color: white; 
+}
+.btn-save { 
+    background-color: var(--success); 
+    color: white; 
+}
+.btn-cancel { 
+    background-color: #95a5a6; 
+    color: white; 
+}
+.btn-edit { 
+    background-color: #f1c40f; 
+    color: var(--primary); 
+    margin-right: 5px; 
+}
+.btn-delete { 
+    background-color: var(--danger); 
+    color: white; 
+}
+
+/* --- Tabla --- */
+.table-container {
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+tr:hover { background-color: #fcfcfc; }
+
+/*Modal*/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
